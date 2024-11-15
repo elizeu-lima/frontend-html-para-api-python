@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 90%; /* Garante que a largura máxima não ultrapasse 90% da tela */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#peopleList {
+    margin-top: 20px;
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.person button {
+    background-color: #54b865;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.person button:hover {
+    background-color: #c82333;
+}
+
+/* Responsividade */
+
+/* Para telas de tablets (largura máxima de 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%; /* Ajusta a largura para 80% da tela em tablets */
+    }
+}
+
+/* Para telas de celulares grandes (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Ajusta a largura para 90% da tela em celulares grandes */
+    }
+
+    .person {
+        flex-direction: column; /* Alinha os elementos em coluna */
+        gap: 10px; /* Adiciona espaçamento entre os elementos */
+    }
+
+    .person button {
+        width: 100%; /* Botão ocupa toda a largura disponível */
+    }
+}
+
+/* Para telas de celulares pequenos (largura máxima de 480px) */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start; /* Ajusta o alinhamento para o topo */
+        padding-top: 20px; /* Adiciona espaço no topo */
+    }
+
+    .container {
+        width: 95%; /* Ajusta a largura para 95% da tela em celulares pequenos */
+        padding: 15px; /* Reduz o padding */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho do título */
+    }
+
+    input, button {
+        font-size: 1rem; /* Ajusta o tamanho do texto dos inputs e botões */
+       
+    }
+}
+
+
+/* Ajuste para o container dos botões */
+.button-group {
+    display: flex;
+    gap: 10px; /* Adiciona um espaço entre os botões */
+}
+
+/* Responsividade específica para dispositivos móveis */
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column; /* Coloca os botões em uma coluna para melhor visualização */
+        gap: 5px; /* Reduz o espaçamento entre os botões */
+    }
+
+    .edit-button, .delete-button {
+        width: 100%; /* Faz os botões ocuparem toda a largura do container */
+    }
+}
